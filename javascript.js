@@ -1,11 +1,6 @@
 const editor = document.querySelector('#editor');
 const btnSize = document.querySelector('#gridSize');
-
-
-
-
-btnSize.addEventListener('click', promptGrid);
-
+const btnColor = document.querySelector('#color');
 
 
 function promptGrid(){
@@ -36,15 +31,11 @@ function buildGrid(length){
         square.style.width = `${960/length}px`;
         square.style.height = `${960/length}px`;
 
-        square.addEventListener('mousedown', () => {
-            square.style.backgroundColor = 'black';
+        square.addEventListener('click', () => {
+            square.style.backgroundColor = btnColor.value;
         });
         editor.appendChild(square);
         }
-}
-
-function setColor(element, color){
-    element.style.backgroundColor = color;
 }
 
 buildGrid(40);
