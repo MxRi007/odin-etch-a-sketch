@@ -2,6 +2,7 @@ const editor = document.querySelector('#editor');
 const btnSize = document.querySelector('#gridSize');
 const btnColor = document.querySelector('#color');
 
+btnSize.addEventListener('click', promptGrid);
 
 function promptGrid(){
     let size = +prompt('Please enter a grid size between 10 - 100 pixels.');
@@ -23,6 +24,7 @@ function promptGrid(){
 
 }
 
+let mousedown = false;
 
 function buildGrid(length){
     for(let i = 0; i < length*length; i++){
@@ -31,12 +33,29 @@ function buildGrid(length){
         square.style.width = `${960/length}px`;
         square.style.height = `${960/length}px`;
 
-        square.addEventListener('click', () => {
-            square.style.backgroundColor = btnColor.value;
+        square.addEventListener('mouseover', () => {
+            if(mousedown){
+                setColor(square);
+            }
         });
+
+        square.addEventListener('mousedown', () => {
+            setColor(square);
+            mousedown = true;
+        });
+
+        square.addEventListener('mouseup', () => {
+            mousedown = false;
+        });
+
         editor.appendChild(square);
         }
 }
+
+function setColor(element){
+    element.style.backgroundColor = btnColor.value;
+}
+
 
 buildGrid(40);
 
