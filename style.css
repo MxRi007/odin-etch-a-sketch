@@ -1,10 +1,15 @@
-
+body {
+    background-color: blueviolet;
+    display: flex;
+    justify-content: center;
+}
 
 .square {
     box-sizing: border-box;
     width: 10px;
     height: 10px;
-    border: 1px solid #33FFE7;
+    border: 1px solid #99E550;
+    background-color: #fbf236;
 }
 
 #editor {
@@ -12,5 +17,16 @@
     flex-wrap: wrap;
     height:960px;
     width: 960px;
-    border: 10px solid #33FFE7;
+    border: 20px solid #99E550;
+    margin-bottom: 30px;
+}
+
+#frame {
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+
+    width:1060px;
+    height:1660px;
+    background-image: url("eas-frame.png");
 }
