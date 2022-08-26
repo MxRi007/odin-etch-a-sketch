@@ -1,7 +1,14 @@
 body {
-    background-color: blueviolet;
+    background-color: #d77bba;
     display: flex;
     justify-content: center;
+
+}
+
+#controls {
+    display: flex;
+    flex-direction: column;
+    margin-right: 40px;
 }
 
 .square {
@@ -9,7 +16,7 @@ body {
     width: 10px;
     height: 10px;
     border: 1px solid #99E550;
-    background-color: #fbf236;
+    background-color: rgb(251, 242, 54);
 }
 
 #editor {
@@ -30,3 +37,16 @@ body {
     height:1660px;
     background-image: url("eas-frame.png");
 }
+
+button, input {
+    padding:20px;
+    background-color:#fbf236;
+    font-size: large;
+    font-weight: bold;
+    border: 20px solid #5FCDe4;
+    width: 200px;
+    height:200px;
+    font-family: 'Courier New', Courier, monospace;
+    color: #99E550;
+}
+
