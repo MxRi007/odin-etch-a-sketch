@@ -32,10 +32,7 @@ body {
     display: flex;
     flex-direction: column-reverse;
     align-items: center;
-
-    width:1060px;
-    height:1660px;
-    background-image: url("eas-frame.png");
+    background-image: url("");
 }
 
 button, input {
